@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>              //henry//
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreadFlow | CyberSecurity Showcase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-content">
+            <h1 class="glitch-large">THREADFLOW-SHOWCASE</h1>
+            <div class="intro-text">
+                <p>
+                    Bem-vindo ao THREADFLOW-SHOWCASE, um ecossistema de simulação hiper-realista e análise forense 
+                    fundamentado na matriz MITRE ATT&CK®. Este showcase foi meticulosamente desenvolvido para engenheiros
+                    de segurança ofensiva (Red Team), analistas de defesa (Blue Team) e acadêmicos de alto nível que buscam
+                    dissecar a anatomia técnica de campanhas de ameaças persistentes avançadas (APTs). Aqui, a teoria se 
+                    funde à prática para revelar como vulnerabilidades sistêmicas são transformadas em vetores de comprometimento total.
+                </p>
+                <p>
+                    Explore a fundo as 14 táticas críticas do framework, percorrendo todo o ciclo de vida de uma 
+                    intrusão: do reconhecimento passivo e inteligência de fontes abertas (OSINT) ao impacto final
+                    e exfiltração de dados. A plataforma oferece uma imersão em metodologias de exploração de baixo
+                    nível (binary exploitation), técnicas de evasão baseadas em manipulação de memória e o endurecimento
+                    de sistemas via protocolos de defesa proativa. Prepare-se para decodificar a mentalidade do adversário
+                    e dominar as camadas de abstração que protegem — ou expõem — a infraestrutura moderna.
+                </p>
+            </div>
+            <button class="access-btn" onclick="startExperience()">
+                INICIAR SEQUÊNCIA DE ACESSO
+            </button>
+        </div>
+    </div>
+
+    <header class="terminal-header">
+        <div class="status-bar">SYSTEM_STATUS: MONITORING_ACTIVE // ENCRYPT: AES-256</div>
+        <h1>THREAT<span class="glitch">FLOW</span></h1>
+        <p>FRAMEWORK MITRE ATT&CK - ANÁLISE TÉCNICA AVANÇADA</p>
+    </header>
+
+    <main class="grid-container">
+        <nav class="side-nav">
+            <div class="nav-item active" onclick="updateDisplay('recon', this)">01. RECONHECIMENTO</div>
+            <div class="nav-item" onclick="updateDisplay('access', this)">02. ACESSO INICIAL</div>
+            <div class="nav-item" onclick="updateDisplay('execution', this)">03. EXECUÇÃO</div>
+            <div class="nav-item" onclick="updateDisplay('persist', this)">04. PERSISTÊNCIA</div>
+            <div class="nav-item" onclick="updateDisplay('privesc', this)">05. ESCALADA PRIVILÉGIO</div>
+            <div class="nav-item" onclick="updateDisplay('evasion', this)">06. EVASÃO DEFESA</div>
+            <div class="nav-item" onclick="updateDisplay('creds', this)">07. ACESSO CREDENCIAIS</div>
+            <div class="nav-item" onclick="updateDisplay('discovery', this)">08. DESCOBERTA</div>
+            <div class="nav-item" onclick="updateDisplay('lateral', this)">09. MOV. LATERAL</div>
+            <div class="nav-item" onclick="updateDisplay('collection', this)">10. COLETA</div>
+            <div class="nav-item" onclick="updateDisplay('command', this)">11. COMANDO E CONTROLE</div>
+            <div class="nav-item" onclick="updateDisplay('exfil', this)">12. EXFILTRAÇÃO</div>
+            <div class="nav-item" onclick="updateDisplay('impact', this)">13. IMPACTO</div>
+            <div class="nav-item" onclick="updateDisplay('final', this)">14. CONCLUSÃO</div>
+        </nav>
+
+        <section class="display-panel">
+            <div id="content-screen">
+                <h2 id="phase-title">> AGUARDANDO_COMANDO</h2>
+                <p id="phase-desc">Selecione uma fase técnica no menu lateral...</p>
+                <div id="phase-details"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
